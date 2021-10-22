@@ -13,8 +13,11 @@ insmod. so cp it to your modules folder (I reuse/create updates/dkms), depmod, t
 example for 5.12.19
 
 sudo mkdir -p /lib/modules/5.12.19/updates/dkms/
+
 sudo cp ubq_core.ko /lib/modules/5.12.19/updates/dkms/
+
 sudo depmod
+
 sudo modprobe ubq_core ip_num=192.168.1.77
 
 The ip address will default to 192.168.1.169 if no param is given
